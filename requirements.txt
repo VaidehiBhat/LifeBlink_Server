@@ -1,5 +1,5 @@
 flask
 numpy
 scipy
-pywavelets
+PyWavelets
 gunicorn
