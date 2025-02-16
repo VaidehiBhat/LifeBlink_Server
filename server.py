@@ -8,9 +8,9 @@ app = Flask(__name__)
 # Function to process EOG (eye blink detection)
 def process_eog(data):
     values = np.array(data)
+    values=values[150:]
     peaks, _ = find_peaks(values, height=500, distance=50)  
     blink_count = len(peaks)
-    blink_count=blink_count-2
     return {"blink_count": blink_count}
 
 # Function to process PPG (with advanced signal processing)
