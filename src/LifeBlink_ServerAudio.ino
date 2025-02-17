@@ -175,9 +175,7 @@ void setup() {
     String ppgData = collectPPGData(PPG_SENSOR_PIN, 20000);
     saveToSD(filenamePPG, ppgData);
     int heartRate = sendDataToRender(renderPPG_URL, filenamePPG);
-    if (heartRate<65){
-      heartRate=random(68,79);
-    }
+
     logPrint("Heart Rate: " + String(heartRate));
 
     logPrint("Process complete.");
